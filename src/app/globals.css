@@ -6,10 +6,10 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
+/* @theme inline {
+  --color-background: var(--foreground);
+  --color-foreground: var(--background);
+} */
 
 /* @media (prefers-color-scheme: dark) {
   :root {

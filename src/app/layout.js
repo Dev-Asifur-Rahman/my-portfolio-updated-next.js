@@ -1,11 +1,10 @@
 import { Raleway } from "next/font/google";
 import "./globals.css";
 
-
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
-  display : "swap"
+  display: "swap",
 });
 
 export const metadata = {
@@ -18,6 +17,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${raleway.variable} h-full antialiased`}
+      data-theme="dark"
     >
       <body className="">{children}</body>
     </html>
