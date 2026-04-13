@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import LightRays from "@/components/section-components/LightRays";
+import NavigateSection from "@/components/section-components/NavigateSection";
 
 export default function Home() {
   return (
@@ -26,9 +27,10 @@ export default function Home() {
         fadeDistance={1}
         saturation={1}
       />
-      <section className="w-full h-full absolute z-10 top-0 p-[2%] overflow-y-auto scroll-smooth">
+      <section className="w-full h-full absolute z-10 top-0 p-[2%] overflow-y-auto scroll-smooth no-scrollbar">
         <Hero></Hero>
         <Hero></Hero>
+        <NavigateSection></NavigateSection>
       </section>
     </div>
   );

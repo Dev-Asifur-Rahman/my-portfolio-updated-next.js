@@ -6,8 +6,13 @@
   --foreground: #171717;
 }
 
-::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .glass-bg {
