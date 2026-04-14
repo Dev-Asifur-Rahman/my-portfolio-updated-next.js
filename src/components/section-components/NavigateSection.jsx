@@ -52,7 +52,7 @@ const NavigateSection = () => {
 
       {navigationObject?.map((object, index) => {
         return (
-          <div className="tooltip tooltip-left" data-tip={object?.name}>
+          <div key={index} className="tooltip tooltip-left" data-tip={object?.name}>
             <button className="btn btn-md btn-circle glass-bg">
               {object?.icon}
             </button>

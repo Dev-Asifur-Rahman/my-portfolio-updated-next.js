@@ -1,8 +1,13 @@
+'use client'
+
 import Hero from "@/components/Hero";
+import NavBar from "@/components/NavBar";
 import LightRays from "@/components/section-components/LightRays";
 import NavigateSection from "@/components/section-components/NavigateSection";
+import { useRef } from "react";
 
 export default function Home() {
+  const scrollRef = useRef(null)
   return (
     <div
       style={{
@@ -27,7 +32,8 @@ export default function Home() {
         fadeDistance={1}
         saturation={1}
       />
-      <section className="w-full h-full absolute z-10 top-0 p-[2%] overflow-y-auto scroll-smooth no-scrollbar">
+      <section ref={scrollRef} className="w-full h-full absolute z-10 top-0 p-[2%] overflow-y-auto scroll-smooth no-scrollbar">
+        <NavBar scrollRef={scrollRef}></NavBar>
         <Hero></Hero>
         <Hero></Hero>
         <NavigateSection></NavigateSection>
