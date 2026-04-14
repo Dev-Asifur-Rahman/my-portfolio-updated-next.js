@@ -18,6 +18,7 @@ export default function Home() {
         fadeDistance={1}
         saturation={1}
       />
+      <section className="w-full border-2 h-full absolute z-10 top-0">Hello</section>
     </div>
   );
 }
