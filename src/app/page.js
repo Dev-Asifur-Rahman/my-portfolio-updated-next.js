@@ -1,8 +1,16 @@
+import Hero from "@/components/Hero";
 import LightRays from "@/components/section-components/LightRays";
 
 export default function Home() {
   return (
-    <div style={{ width: "100%", height: "100vh", position: "relative" }}>
+    <div
+      style={{
+        width: "100%",
+        height: "100vh",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       <LightRays
         raysOrigin="top-center"
         raysColor="#ffffff"
@@ -18,7 +26,10 @@ export default function Home() {
         fadeDistance={1}
         saturation={1}
       />
-      <section className="w-full border-2 h-full absolute z-10 top-0">Hello</section>
+      <section className="w-full h-full absolute z-10 top-0 p-[2%] overflow-y-auto scroll-smooth">
+        <Hero></Hero>
+        <Hero></Hero>
+      </section>
     </div>
   );
 }
