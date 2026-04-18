@@ -9,34 +9,34 @@ import {
 } from "lucide-react";
 import React from "react";
 
-const NavigateSection = () => {
+const NavigateSection = ({ scrollRef }) => {
   const navigationObject = [
-    {
-      name: "Go Top",
-      icon: <ChevronsUp />,
-    },
-    {
-      name: "Projects",
-      icon: <LayersMinus />,
-    },
-
-    {
-      name: "Skills",
-      icon: <Wrench />,
-    },
-    {
-      name: "Education",
-      icon: <GraduationCap />,
-    },
-    {
-      name: "About",
-      icon: <UserRoundPen />,
-    },
-    {
-      name: "Contact",
-      icon: <Headset />,
-    },
+    { name: "Go Top", icon: <ChevronsUp />, id: "go-top" },
+    { name: "Projects", icon: <LayersMinus />, id: "projects" },
+    { name: "Skills", icon: <Wrench />, id: "skills" },
+    { name: "Education", icon: <GraduationCap />, id: "education" },
+    { name: "About", icon: <UserRoundPen />, id: "about" },
+    { name: "Contact", icon: <Headset />, id: "contact" },
   ];
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    const container = scrollRef.current;
+    const navbar = document.getElementById("navbar");
+
+    if (!element || !container) return;
+
+    const navbarHeight = navbar?.offsetHeight || 0;
+
+    const elementTop =
+      element.getBoundingClientRect().top + container.scrollTop;
+
+    container.scrollTo({
+      top: elementTop - navbarHeight - 30,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="fab z-20">
       <div
@@ -44,21 +44,27 @@ const NavigateSection = () => {
         role="button"
         className="btn btn-md btn-circle glass-bg"
       >
-        <Menu></Menu>
+        <Menu />
       </div>
+
       <div className="fab-close">
         <span className="btn btn-circle btn-md glass-bg">✕</span>
       </div>
 
-      {navigationObject?.map((object, index) => {
-        return (
-          <div key={index} className="tooltip tooltip-left" data-tip={object?.name}>
-            <button className="btn btn-md btn-circle glass-bg">
-              {object?.icon}
-            </button>
-          </div>
-        );
-      })}
+      {navigationObject?.map((object, index) => (
+        <div
+          key={index}
+          className="tooltip tooltip-left"
+          data-tip={object.name}
+        >
+          <button
+            onClick={() => handleScroll(object.id)}
+            className="btn btn-md btn-circle glass-bg"
+          >
+            {object.icon}
+          </button>
+        </div>
+      ))}
     </div>
   );
 };

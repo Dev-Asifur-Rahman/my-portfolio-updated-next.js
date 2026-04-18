@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <div className='w-full h-screen glass-bg'>
+        <div id="go-top" className='w-full h-screen glass-bg'>
             Hero
         </div>
     );

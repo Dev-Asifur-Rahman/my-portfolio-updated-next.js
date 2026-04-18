@@ -37,7 +37,7 @@ export default function Home() {
         fadeDistance={1}
         saturation={1}
       />
-      <section ref={scrollRef} className="w-full h-full absolute z-10 top-0 p-[2%] overflow-y-auto scroll-smooth no-scrollbar">
+      <section id="component-container" ref={scrollRef} className="w-full h-full absolute z-10 top-0 p-[2%] overflow-y-auto scroll-smooth no-scrollbar">
         <NavBar scrollRef={scrollRef}></NavBar>
         <Hero></Hero>
         <About></About>
@@ -45,7 +45,7 @@ export default function Home() {
         <Projects></Projects>
         <Skills></Skills>
         <Contact></Contact>
-        <NavigateSection></NavigateSection>
+        <NavigateSection scrollRef={scrollRef} ></NavigateSection>
       </section>
     </div>
   );
