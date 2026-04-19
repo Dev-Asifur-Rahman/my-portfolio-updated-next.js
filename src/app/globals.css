@@ -23,13 +23,6 @@
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.effect-glass {
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
 .text-gradient {
   background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7);
 
