@@ -23,7 +23,10 @@ const NavBar = ({ scrollRef }) => {
     return () => element.removeEventListener("scroll", handleScroll);
   }, [scrollRef]);
   return (
-    <div id="navbar" className="glass-bg flex justify-between items-center mb-[2%] md:mb-[1%] md:rounded-xl rounded-lg  p-2 md:p-3 lg:p-4 sticky top-0">
+    <div
+      id="navbar"
+      className="glass-bg flex justify-between items-center mb-2 md:mb-3 lg:mb-4 md:rounded-xl rounded-lg  p-2 md:p-3 lg:p-4 sticky top-0"
+    >
       <div className="flex items-center gap-2 w-2/3">
         <Image
           src={"/images/asifurs-logo.png"}
@@ -45,7 +48,6 @@ const NavBar = ({ scrollRef }) => {
           value={progress}
           max="100"
         ></progress>
-        
       </div>
     </div>
   );

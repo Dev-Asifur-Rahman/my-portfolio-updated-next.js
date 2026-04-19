@@ -19,20 +19,42 @@ const NavigateSection = ({ scrollRef }) => {
     { name: "Contact", icon: <Headset />, id: "contact" },
   ];
 
+  const getDynamicOffset = () => {
+    const navbar = document.getElementById("navbar");
+    if (!navbar) return 20;
+
+    const baseHeight = navbar.getBoundingClientRect().height;
+
+    const screenOffset =
+      window.innerWidth < 640
+        ? 20
+        : window.innerWidth < 1024
+        ? 28
+        : 36;
+
+    return baseHeight + screenOffset;
+  };
+
   const handleScroll = (id) => {
     const element = document.getElementById(id);
     const container = scrollRef.current;
-    const navbar = document.getElementById("navbar");
 
     if (!element || !container) return;
 
-    const navbarHeight = navbar?.offsetHeight || 0;
+    if (id === "go-top") {
+      container.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return;
+    }
 
-    const elementTop =
-      element.getBoundingClientRect().top + container.scrollTop;
+    const offset = getDynamicOffset();
+
+    const top = element.offsetTop;
 
     container.scrollTo({
-      top: elementTop - navbarHeight - 30,
+      top: top - offset,
       behavior: "smooth",
     });
   };
@@ -51,7 +73,7 @@ const NavigateSection = ({ scrollRef }) => {
         <span className="btn btn-circle btn-md glass-bg">✕</span>
       </div>
 
-      {navigationObject?.map((object, index) => (
+      {navigationObject.map((object, index) => (
         <div
           key={index}
           className="tooltip tooltip-left"
