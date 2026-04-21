@@ -20,19 +20,18 @@ const NavigateSection = ({ scrollRef }) => {
   ];
 
   const getDynamicOffset = () => {
-    const navbar = document.getElementById("navbar");
-    if (!navbar) return 20;
+    if (window.innerWidth < 640) {
+      // sm
+      return 48 + 20;
+    }
 
-    const baseHeight = navbar.getBoundingClientRect().height;
+    if (window.innerWidth < 1024) {
+      // md
+      return 64 + 28;
+    }
 
-    const screenOffset =
-      window.innerWidth < 640
-        ? 20
-        : window.innerWidth < 1024
-        ? 28
-        : 36;
-
-    return baseHeight + screenOffset;
+    // lg
+    return 76 + 36;
   };
 
   const handleScroll = (id) => {
@@ -51,10 +50,8 @@ const NavigateSection = ({ scrollRef }) => {
 
     const offset = getDynamicOffset();
 
-    const top = element.offsetTop;
-
     container.scrollTo({
-      top: top - offset,
+      top: element.offsetTop - offset,
       behavior: "smooth",
     });
   };
