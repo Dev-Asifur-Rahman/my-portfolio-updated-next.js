@@ -21,16 +21,14 @@ const NavigateSection = ({ scrollRef }) => {
 
   const getDynamicOffset = () => {
     if (window.innerWidth < 640) {
-      // sm
+      
       return 48 + 20;
     }
-
     if (window.innerWidth < 1024) {
-      // md
+
       return 64 + 28;
     }
 
-    // lg
     return 76 + 36;
   };
 
