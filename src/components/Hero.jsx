@@ -83,7 +83,7 @@ const Hero = () => {
             <div className="absolute inset-0 blur-3xl opacity-40  rounded-full"></div>
 
             <Image
-              src="/images/profile-image.png"
+              src="/images/profile-image.webp"
               width={500}
               height={500}
               alt="Asifur Rahman"
