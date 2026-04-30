@@ -22,7 +22,7 @@ export default function Home() {
         overflow: "hidden",
       }}
     >
-      <LightRays
+      {/* <LightRays
         raysOrigin="top-center"
         raysColor="#ffffff"
         raysSpeed={1}
@@ -36,7 +36,8 @@ export default function Home() {
         pulsating={false}
         fadeDistance={1}
         saturation={1}
-      />
+      /> */}
+      
       <section id="component-container" ref={scrollRef} className="w-full h-full absolute z-10 top-0 p-3 md:p-4 lg:p-5 overflow-y-auto scroll-smooth no-scrollbar">
         <NavBar scrollRef={scrollRef}></NavBar>
         <Hero></Hero>

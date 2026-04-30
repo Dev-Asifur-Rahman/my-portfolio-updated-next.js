@@ -25,13 +25,13 @@ const NavBar = ({ scrollRef }) => {
   return (
     <div
       id="navbar"
-      className="h-12 md:h-16 lg:h-[76px] glass-bg flex justify-between items-center mb-2 md:mb-3 lg:mb-4 md:rounded-xl rounded-lg  p-2 md:p-3 lg:p-4 sticky top-0"
+      className="glass-bg backdrop-blur-xl h-12 md:h-16 lg:h-[76px]  flex justify-between items-center mb-2 md:mb-3 lg:mb-4 md:rounded-xl rounded-lg  p-2 md:p-3 lg:p-4 sticky top-0 z-50"
     >
-      <div className="flex items-center gap-2 w-2/3">
+      <div className="flex items-center gap-2 w-2/3 ">
         <Image
-          src={"/images/asifurs-logo.png"}
-          width={64}
-          height={64}
+          src={"/images/asifurs-logo3.webp"}
+          width={500}
+          height={500}
           alt="asifurs-image-logo"
           className="w-5 md:w-8 lg:w-10 aspect-square"
         ></Image>
