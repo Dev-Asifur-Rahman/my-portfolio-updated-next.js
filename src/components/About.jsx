@@ -24,10 +24,10 @@ const About = () => {
           </h2>
 
           <p className="mt-5 text-white/70 text-sm md:text-base lg:text-lg leading-relaxed max-w-4xl">
-            I’m Asifur Rahman, a MERN Stack Developer passionate about
+            A Full Stack Developer passionate about
             creating modern, responsive and user-focused web applications.
             I enjoy turning ideas into interactive digital experiences using
-            technologies like React, Next.js, Node.js, Express.js and MongoDB.
+            technologies like React, Next.js, Typescript, Node.js, Express.js and MongoDB, PostgreSQL.
           </p>
 
           <p className="mt-4 text-white/70 text-sm md:text-base lg:text-lg leading-relaxed max-w-4xl">
