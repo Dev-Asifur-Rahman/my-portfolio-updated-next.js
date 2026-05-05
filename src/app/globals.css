@@ -24,7 +24,7 @@
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7,#38bdf8);
+  background: linear-gradient(90deg, #38bdf8, #6366f1, #a855f7, #38bdf8);
   background-size: 200% 200%;
 
   -webkit-background-clip: text;
@@ -41,5 +41,53 @@
   }
   100% {
     background-position: 200% 50%;
+  }
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#profile-image::after,
+#profile-image::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+  /* background-image: conic-gradient(#38bdf8,#6366f1, #a855f7,#38bdf8); */
+  background-image: conic-gradient(
+    from var(--angle),
+    #38bdf8 0deg,
+    transparent 150deg,
+
+    transparent 180deg,
+
+    #a855f7 180deg,
+    transparent 330deg,
+
+    transparent 360deg
+  );
+
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  border-radius: 100%;
+  z-index: -12;
+  animation: 3s spin linear infinite;
+}
+
+#profile-image::before {
+  filter: blur(0.5rem);
+  opacity: 1.5rem;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
   }
 }

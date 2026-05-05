@@ -1,11 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import {
-  FaFacebookF,
-  FaGithub,
-  FaLinkedinIn,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -14,7 +9,6 @@ const Hero = () => {
       className="w-full min-h-[calc(100vh-68px)] md:min-h-[calc(100vh-92px)] lg:min-h-[calc(100vh-112px)] glass-bg rounded-lg md:rounded-xl p-4 md:p-6 lg:p-8 flex items-center overflow-hidden"
     >
       <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12">
-        
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight">
             <span className="">Hi, I’m </span>
@@ -26,7 +20,8 @@ const Hero = () => {
           </h2>
 
           <p className="mt-5 text-sm md:text-base lg:text-lg text-white/70 max-w-2xl">
-            I love building responsive and user-friendly web applications. Passionate about clean code and beautiful UI.
+            I love building responsive and user-friendly web applications.
+            Passionate about clean code and beautiful UI.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 ">
@@ -82,16 +77,17 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 blur-3xl opacity-40  rounded-full"></div>
 
-            <Image
-              src="/images/profile-image.webp"
-              width={500}
-              height={500}
-              alt="Asifur Rahman"
-              className="relative -z-10 w-52 md:w-72 lg:w-[320px] aspect-square object-cover rounded-full border-4 border-white/80"
-            />
+            <div id="profile-image" className="relative w-fit">
+              <Image
+                src="/images/profile-image.webp"
+                width={500}
+                height={500}
+                alt="Asifur Rahman"
+                className="relative -z-10 w-52 md:w-72 lg:w-[320px] aspect-square object-cover rounded-full"
+              />
+            </div>
           </div>
         </div>
-
       </div>
     </section>
   );
