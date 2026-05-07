@@ -23,7 +23,7 @@ const NavBar = ({ scrollRef }) => {
     return () => element.removeEventListener("scroll", handleScroll);
   }, [scrollRef]);
   return (
-    <div className="glass-bg flex justify-between items-center mb-[2%] md:rounded-xl rounded-lg  p-2 md:p-3 lg:p-4 sticky top-0">
+    <div className="glass-bg flex justify-between items-center mb-[2%] md:mb-[1%] md:rounded-xl rounded-lg  p-2 md:p-3 lg:p-4 sticky top-0">
       <div className="flex items-center gap-2 w-2/3">
         <Image
           src={"/images/asifurs-logo.png"}
@@ -36,7 +36,7 @@ const NavBar = ({ scrollRef }) => {
           Asifur Rahman
         </p>
       </div>
-      <div className="w-1/3 ">
+      <div className="w-1/3">
         <progress
           className="progress [&::-webkit-progress-value]:bg-gradient-to-r
   [&::-webkit-progress-value]:from-[#38bdf8]
@@ -45,6 +45,7 @@ const NavBar = ({ scrollRef }) => {
           value={progress}
           max="100"
         ></progress>
+        
       </div>
     </div>
   );

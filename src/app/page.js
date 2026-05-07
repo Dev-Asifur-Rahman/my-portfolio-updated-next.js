@@ -1,9 +1,14 @@
 'use client'
 
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Education from "@/components/Education";
 import Hero from "@/components/Hero";
 import NavBar from "@/components/NavBar";
+import Projects from "@/components/Projects";
 import LightRays from "@/components/section-components/LightRays";
 import NavigateSection from "@/components/section-components/NavigateSection";
+import Skills from "@/components/Skills";
 import { useRef } from "react";
 
 export default function Home() {
@@ -35,7 +40,11 @@ export default function Home() {
       <section ref={scrollRef} className="w-full h-full absolute z-10 top-0 p-[2%] overflow-y-auto scroll-smooth no-scrollbar">
         <NavBar scrollRef={scrollRef}></NavBar>
         <Hero></Hero>
-        <Hero></Hero>
+        <About></About>
+        <Education></Education>
+        <Projects></Projects>
+        <Skills></Skills>
+        <Contact></Contact>
         <NavigateSection></NavigateSection>
       </section>
     </div>
