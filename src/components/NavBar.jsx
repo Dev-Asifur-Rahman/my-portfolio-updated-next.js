@@ -15,12 +15,11 @@ const NavBar = ({ scrollRef }) => {
       const scrollHeight = element.scrollHeight;
       const clientHeight = element.clientHeight;
 
-      // progress bar
+      
       const maxScroll = scrollHeight - clientHeight;
       const percent = maxScroll > 0 ? (scrollTop / maxScroll) * 100 : 0;
       setProgress(percent);
 
-      // navbar scale logic
       if (scrollTop < 5) {
         setIsScrolled(false);
       } else {
@@ -50,7 +49,7 @@ const NavBar = ({ scrollRef }) => {
         ${isScrolled ? "scale-95" : "scale-100"}
       `}
     >
-      <div className="flex items-center gap-2 w-2/3 ">
+      <div className={`flex items-center gap-2 w-2/3 loaded`}>
         <Image
           src={"/images/asifurs-logo3.webp"}
           width={500}

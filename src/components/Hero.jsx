@@ -1,8 +1,9 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Hero = () => {
+  const [isIamgeLoaded, setImageLoaded] = useState(false);
   return (
     <section
       id="go-top"
@@ -77,12 +78,16 @@ const Hero = () => {
           <div className="relative">
             <div className="absolute inset-0 blur-3xl opacity-40  rounded-full"></div>
 
-            <div id="profile-image" className="relative w-fit">
+            <div
+              id="profile-image"
+              className={`relative w-fit ${isIamgeLoaded && "loaded"}`}
+            >
               <Image
                 src="/images/profile-image.webp"
                 width={500}
                 height={500}
                 alt="Asifur Rahman"
+                onLoadingComplete={()=> setImageLoaded(true)}
                 className="relative -z-10 w-52 md:w-72 lg:w-[320px] aspect-square object-cover rounded-full"
               />
             </div>
