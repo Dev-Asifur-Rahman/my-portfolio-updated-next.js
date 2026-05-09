@@ -53,6 +53,15 @@
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -94,10 +103,7 @@
 
 #profile-image.loaded::after,
 #profile-image.loaded::before {
-  opacity: 1;
   visibility: visible;
 
-  animation: spin 3s linear infinite;
+  animation:fadeIn 1s ease forwards, spin 3s linear infinite;
 }
-
-
