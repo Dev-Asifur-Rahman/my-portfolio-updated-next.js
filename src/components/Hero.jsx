@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="go-top"
-      className="w-full min-h-[calc(100vh-68px)] md:min-h-[calc(100vh-92px)] lg:min-h-[calc(100vh-112px)] glass-bg rounded-lg md:rounded-xl p-4 md:p-6 lg:p-8 flex items-center overflow-hidden"
+      className="w-full min-h-[calc(100vh-68px)] md:min-h-[calc(100vh-92px)] lg:min-h-[calc(100vh-112px)] rounded-lg md:rounded-xl p-4 md:p-6 lg:p-8 flex items-center overflow-hidden"
     >
       <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12">
         <div className="flex-1 text-center lg:text-left">
