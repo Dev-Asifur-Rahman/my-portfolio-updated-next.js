@@ -105,5 +105,5 @@
 #profile-image.loaded::before {
   visibility: visible;
 
-  animation:fadeIn 1s ease forwards, spin 3s linear infinite;
+  animation:fadeIn 1s ease forwards, spin 10s linear infinite;
 }
