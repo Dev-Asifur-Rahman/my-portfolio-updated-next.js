@@ -126,7 +126,13 @@ const Skills = () => {
         {
           name: "Next.js",
           icon: (
-            <img width="48" height="48" src="https://img.icons8.com/color/48/nextjs.png" alt="nextjs" className="invert"/>
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/color/48/nextjs.png"
+              alt="nextjs"
+              className="invert"
+            />
           ),
         },
         {
@@ -548,6 +554,24 @@ const Skills = () => {
       id="skills"
       className="w-full lg:mt-10 md:mt-6 mt-4 rounded-lg md:rounded-xl"
     >
+      <div className="w-full flex flex-col items-center text-center mb-8 md:mb-12">
+        <p className="uppercase tracking-[6px] text-sm text-gradient mb-3">
+          My Expertise
+        </p>
+
+        <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold">
+          Skills & Technologies
+        </h2>
+
+        <p className="max-w-2xl text-white/60 mt-4 text-sm md:text-base">
+          Technologies and tools I use to build modern, scalable and interactive
+          web applications.
+        </p>
+
+
+        <div className="mt-6 w-40 h-[2px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+      </div>
+
       <div id="skill-icon-fade-div" className="w-full grid grid-cols-1 gap-y-8">
         <section className="w-full">
           <Marquee speed={30} className="">
@@ -566,6 +590,7 @@ const Skills = () => {
             })}
           </Marquee>
         </section>
+
         <section className="w-full">
           <Marquee speed={30} direction="right" className="">
             {skillGroups?.backend?.skills.map((skill, index) => {
@@ -583,6 +608,7 @@ const Skills = () => {
             })}
           </Marquee>
         </section>
+
         <section className="w-full">
           <Marquee speed={30} className="">
             {skillGroups?.tools?.skills.map((skill, index) => {
