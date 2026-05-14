@@ -382,13 +382,7 @@ const Skills = () => {
         {
           name: "Axios",
           icon: (
-            <img
-              height={50}
-              width={50}
-              className="invert brightness-0"
-              src="https://axios.rest/logo-light.svg"
-              alt=""
-            />
+           <img height={50} width={50} src="icons/axios.png" alt="" />
           ),
         },
         {
