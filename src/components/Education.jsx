@@ -6,9 +6,22 @@ const Education = () => {
       id="education"
       className="w-full lg:mt-10 md:mt-6 mt-4 rounded-lg md:rounded-xl p-4 md:p-6 lg:p-8"
     >
-      <h2 className="text-xl md:text-3xl lg:text-4xl font-bold text-gradient mb-6">
-        Education
-      </h2>
+      <div className="w-full flex flex-col items-center text-center mb-8 md:mb-12">
+        <p className="uppercase tracking-[6px] text-sm text-gradient mb-3">
+          Academic Journey
+        </p>
+
+        <h2 className="lg:text-5xl md:text-4xl text-3xl font-bold">
+          Education & Learning
+        </h2>
+
+        <p className="max-w-2xl text-white/60 mt-4 text-sm md:text-base">
+          My academic background, learning experiences and the journey that
+          shaped my skills in software development and modern technologies.
+        </p>
+
+        <div className="mt-6 w-40 h-[2px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
+      </div>
 
       <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
         <li>
