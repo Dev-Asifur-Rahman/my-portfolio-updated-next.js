@@ -548,7 +548,7 @@ const Skills = () => {
       id="skills"
       className="w-full lg:mt-10 md:mt-6 mt-4 rounded-lg md:rounded-xl"
     >
-      <div className="w-full grid grid-cols-1 gap-y-8">
+      <div id="skill-icon-fade-div" className="w-full grid grid-cols-1 gap-y-8">
         <section className="w-full">
           <Marquee speed={30} className="">
             {skillGroups?.frontend?.skills.map((skill, index) => {
