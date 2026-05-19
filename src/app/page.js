@@ -45,9 +45,9 @@ export default function Home() {
         <Education></Education>
         <Projects></Projects>
         <Skills></Skills>
-        <Contact></Contact>
-        <NavigateSection scrollRef={scrollRef} ></NavigateSection>
+        <Contact></Contact>       
       </section>
+      <NavigateSection scrollRef={scrollRef} ></NavigateSection>
     </div>
   );
 }
