@@ -55,11 +55,11 @@ const Education = () => {
             </p>
           </div>
 
-          <hr />
+          <hr className="bg-white/10"/>
         </li>
 
         <li>
-          <hr />
+          <hr className="bg-white/10"/>
 
           <div className="timeline-middle">
             <svg
@@ -88,11 +88,11 @@ const Education = () => {
             </p>
           </div>
 
-          <hr />
+          <hr className="bg-white/10"/>
         </li>
 
         <li>
-          <hr />
+          <hr className="bg-white/10"/>
 
           <div className="timeline-middle">
             <svg
@@ -109,7 +109,7 @@ const Education = () => {
             </svg>
           </div>
 
-          <div className="timeline-start md:text-end glass-bg p-4 rounded-lg">
+          <div className="timeline-start mb-10 md:text-end glass-bg p-4 rounded-lg">
             <time className="font-mono text-sm text-gray-300">2015 - 2018</time>
             <div className="text-lg font-black text-white">
               Secondary School Certificate (SSC)
@@ -121,11 +121,11 @@ const Education = () => {
             </p>
           </div>
 
-          <hr />
+          <hr className="bg-white/10"/>
         </li>
 
         <li>
-          <hr />
+          <hr className="bg-white/10"/>
 
           <div className="timeline-middle">
             <svg
