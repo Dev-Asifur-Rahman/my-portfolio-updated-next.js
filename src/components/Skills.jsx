@@ -552,7 +552,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="w-full lg:mt-10 md:mt-6 mt-4 rounded-lg md:rounded-xl"
+      className="w-full lg:mt-30 md:mt-25 mt-20 rounded-lg md:rounded-xl"
     >
       <div className="w-full flex flex-col items-center text-center mb-8 md:mb-12">
         <p className="uppercase tracking-[6px] text-sm text-gradient mb-3">
@@ -572,7 +572,7 @@ const Skills = () => {
         <div className="mt-6 w-40 h-[2px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
       </div>
 
-      <div id="skill-icon-fade-div" className="w-full grid grid-cols-1 gap-y-8">
+      <div id="skill-icon-fade-div" className="w-full grid grid-cols-1 md:gap-y-8 gap-y-4">
         <section className="w-full">
           <Marquee speed={30} className="">
             {skillGroups?.frontend?.skills.map((skill, index) => {

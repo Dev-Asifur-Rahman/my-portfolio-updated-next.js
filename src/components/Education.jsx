@@ -4,7 +4,7 @@ const Education = () => {
   return (
     <div
       id="education"
-      className="w-full lg:mt-10 md:mt-6 mt-4 rounded-lg md:rounded-xl p-4 md:p-6 lg:p-8"
+      className="w-full lg:mt-30 md:mt-25 mt-20 rounded-lg md:rounded-xl p-4 md:p-6 lg:p-8"
     >
       <div className="w-full flex flex-col items-center text-center mb-8 md:mb-12">
         <p className="uppercase tracking-[6px] text-sm text-gradient mb-3">
