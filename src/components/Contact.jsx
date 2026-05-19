@@ -132,7 +132,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="text-center text-gradient uppercase mb-1 font-semibold">
+      <div className="text-center text-[10px] md:text-base text-gradient uppercase mb-1 font-semibold">
         © 2026 Asifur Rahman. All Rights Reserved.
       </div>
     </div>
