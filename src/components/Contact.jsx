@@ -38,18 +38,18 @@ const Contact = () => {
             </p>
 
             <div className="mt-8 space-y-4">
-              <div className="flex items-center gap-4">
+              <div className="flex md:flex-row flex-col md:items-center items-start gap-4">
                 <div className="h-12 w-12 rounded-full glass-bg flex items-center justify-center">
                   <Mail size={20} />
                 </div>
 
-                <div>
+                <div className="">
                   <p className="text-white/50 text-sm">Email</p>
                   <p className="font-medium">asifurrahman.ac@gmail.com</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex md:flex-row flex-col md:items-center items-start gap-4">
                 <div className="h-12 w-12 rounded-full glass-bg flex items-center justify-center">
                   <Phone size={20} />
                 </div>
@@ -60,7 +60,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex md:flex-row flex-col md:items-center items-start gap-4">
                 <div className="h-12 w-12 rounded-full glass-bg flex items-center justify-center">
                   <MapPin size={20} />
                 </div>
@@ -71,7 +71,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex md:flex-row flex-col md:items-center items-start gap-4">
                 <div className="h-12 w-12 rounded-full glass-bg flex items-center justify-center">
                   <Briefcase size={20} />
                 </div>
@@ -132,7 +132,9 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <div className="text-center text-gradient uppercase mb-1 font-semibold">© 2026 Asifur Rahman. All Rights Reserved.</div>
+      <div className="text-center text-gradient uppercase mb-1 font-semibold">
+        © 2026 Asifur Rahman. All Rights Reserved.
+      </div>
     </div>
   );
 };
