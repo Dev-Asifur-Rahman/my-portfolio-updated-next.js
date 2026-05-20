@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Parallax } from "swiper/modules";
 
 const Projects = () => {
   const projects = [
     {
       name: "NextLearn",
-      image: "project-images/nextlearn.jpg",
+      image: "/project-images/nextlearn.jpg",
     },
     {
       name: "CampAid",
-      image: "project-images/campaid.jpg",
+      image: "/project-images/campaid.jpg",
     },
     {
       name: "LitHub",
-      image: "project-images/lithub.jpg",
+      image: "/project-images/lithub.jpg",
     },
     {
       name: "DealBondhu",
-      image: "project-images/dealbondhu.jpg",
+      image: "/project-images/dealbondhu.jpg",
     },
   ];
   const [project, setProject] = useState(projects[0]);
@@ -49,10 +50,11 @@ const Projects = () => {
         <Swiper
           className="h-full w-full relative"
           grabCursor
+          parallax
           centeredSlides={true}
           initialSlide={2}
           speed={900}
-          parallax
+          modules={[Parallax]}
           breakpoints={{
             0: {
               slidesPerView: 1.2,
