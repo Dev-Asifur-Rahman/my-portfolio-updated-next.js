@@ -578,8 +578,8 @@ const Skills = () => {
             {skillGroups?.frontend?.skills.map((skill, index) => {
               return (
                 <div
-                  style={{
-                    boxShadow: "inset 0 4px 12px rgba(255,255,255,0.2)",
+                 style={{
+                    boxShadow: "inset 0 4px 12px rgba(255,255,255,0.2 )",
                   }}
                   className="h-20 aspect-square lg:mx-12 md:mx-8 mx-4 glass-bg rounded-full shadow-inner flex items-center justify-center"
                   key={index}

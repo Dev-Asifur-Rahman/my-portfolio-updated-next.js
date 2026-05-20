@@ -76,7 +76,7 @@ const NavigateSection = ({ scrollRef }) => {
         >
           <button
             onClick={() => handleScroll(object.id)}
-            className="btn btn-md btn-circle glass-bg"
+            className="btn btn-md btn-circle glass-bg backdrop-blur-sm"
           >
             {object.icon}
           </button>
