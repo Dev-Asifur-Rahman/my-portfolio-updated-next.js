@@ -63,7 +63,11 @@ const Projects = () => {
             return (
               <SwiperSlide key={index} className="rounded-lg md:rounded-2xl">
                 <div className="img-wrapper">
-                  <img src={p?.image} alt="" className="rounded-lg md:rounded-2xl"/>
+                  <img
+                    src={p?.image}
+                    alt=""
+                    className="rounded-lg md:rounded-2xl"
+                  />
                 </div>
                 <button
                   onClick={() => projectModal(index)}
@@ -80,12 +84,62 @@ const Projects = () => {
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box glass-bg backdrop-blur-2xl">
           <form method="dialog">
-            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gradient">
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-gradient border-none focus:outline-none focus:ring-0 active:outline-none">
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg text-gradient">{project?.name}</h3>
-          <p className="py-4">Press ESC key or click on ✕ button to close</p>
+
+          <h3 className="font-bold text-lg text-gradient mb-3">
+            {project?.name}
+          </h3>
+
+          {/* Image section (dummy) */}
+          <div className="w-full h-52 md:h-64 rounded-xl overflow-hidden mb-4">
+            <img
+              src="project-images/campaid.jpg"
+              className="w-full h-full object-cover"
+              alt=""
+            />
+          </div>
+
+          {/* Description */}
+          <div className="text-white/70 text-sm leading-relaxed mb-4">
+            A modern full-stack MERN project built with authentication,
+            dashboard, payment integration and real-time data handling.
+          </div>
+
+          {/* Tech stack (dummy) */}
+          <div className="flex flex-wrap gap-2 mb-4">
+            <span className="px-3 py-1 text-xs rounded-full bg-white/10">
+              React
+            </span>
+            <span className="px-3 py-1 text-xs rounded-full bg-white/10">
+              Node
+            </span>
+            <span className="px-3 py-1 text-xs rounded-full bg-white/10">
+              MongoDB
+            </span>
+            <span className="px-3 py-1 text-xs rounded-full bg-white/10">
+              Tailwind
+            </span>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3">
+            <button
+              className="btn btn-sm
+              glass-bg text-gradient backdrop-blur-[3px] rounded-lg"
+            >
+              Live Demo
+            </button>
+
+            <button
+              className="btn btn-sm
+              glass-bg text-gradient backdrop-blur-[3px] rounded-lg"
+            >
+              GitHub
+            </button>
+          </div>
         </div>
       </dialog>
     </div>
