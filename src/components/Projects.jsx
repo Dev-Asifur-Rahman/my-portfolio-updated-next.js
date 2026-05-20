@@ -6,15 +6,19 @@ const Projects = () => {
   const projects = [
     {
       name: "NextLearn",
+      image: "project-images/nextlearn.jpg",
     },
     {
       name: "CampAid",
+      image: "project-images/campaid.jpg",
     },
     {
       name: "LitHub",
+      image: "project-images/lithub.jpg",
     },
     {
       name: "DealBondhu",
+      image: "project-images/dealbondhu.jpg",
     },
   ];
   const [project, setProject] = useState(projects[0]);
@@ -32,57 +36,44 @@ const Projects = () => {
         <Swiper
           className="h-full w-full relative"
           grabCursor
-          slidesPerView={1.5}
           centeredSlides={true}
           initialSlide={2}
           speed={900}
           parallax
-          spaceBetween={20}
+          breakpoints={{
+            0: {
+              slidesPerView: 1.2,
+              spaceBetween: 15,
+            },
+            640: {
+              slidesPerView: 1.2,
+              spaceBetween: 15,
+            },
+            768: {
+              slidesPerView: 1.3,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 1.5,
+              spaceBetween: 40,
+            },
+          }}
         >
-          <SwiperSlide>
-            <div className="img-wrapper">
-              <img src="project-images/nextlearn.jpg" alt="" />
-            </div>
-            <button
-              onClick={() => projectModal(0)}
-              className="btn glass-bg absolute top-1/2 left-1/2 -translate-1/2 text-gradient backdrop-blur-[3px] rounded-lg"
-            >
-              Details
-            </button>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="img-wrapper">
-              <img src="project-images/campaid.jpg" alt="" />
-            </div>
-            <button
-              onClick={() => projectModal(1)}
-              className="btn glass-bg absolute top-1/2 left-1/2 -translate-1/2 text-gradient backdrop-blur-[3px] rounded-lg"
-            >
-              Details
-            </button>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="img-wrapper">
-              <img src="project-images/lithub.jpg" alt="" />
-            </div>
-            <button
-              onClick={() => projectModal(2)}
-              className="btn glass-bg absolute top-1/2 left-1/2 -translate-1/2 text-gradient backdrop-blur-[3px] rounded-lg"
-            >
-              Details
-            </button>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="img-wrapper">
-              <img src="project-images/dealbondhu.jpg" alt="" />
-            </div>
-            <button
-              onClick={() => projectModal(3)}
-              className="btn glass-bg absolute top-1/2 left-1/2 -translate-1/2 text-gradient backdrop-blur-[3px] rounded-lg"
-            >
-              Details
-            </button>
-          </SwiperSlide>
+          {projects?.map((p, index) => {
+            return (
+              <SwiperSlide key={index} className="rounded-lg md:rounded-2xl">
+                <div className="img-wrapper">
+                  <img src={p?.image} alt="" className="rounded-lg md:rounded-2xl"/>
+                </div>
+                <button
+                  onClick={() => projectModal(index)}
+                  className="btn btn-sm md:btn-md glass-bg absolute top-1/2 left-1/2 -translate-1/2 text-gradient backdrop-blur-[3px] rounded-lg"
+                >
+                  Details
+                </button>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </section>
 

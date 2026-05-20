@@ -123,7 +123,6 @@
 #swiper-section .swiper-slide {
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
 }
 
 #swiper-section .swiper-slide .img-wrapper {
@@ -139,7 +138,6 @@
 .swiper-slide img{
   width: 100%;
   height: auto;
-  border-radius: 20px;
   object-fit: cover;
   user-select: none;
   filter: grayscale(1);
