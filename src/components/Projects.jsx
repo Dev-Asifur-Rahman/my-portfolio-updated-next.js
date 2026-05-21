@@ -1,6 +1,8 @@
+"use client";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/parallax";
 import { Parallax } from "swiper/modules";
 
 const Projects = () => {
@@ -40,15 +42,16 @@ const Projects = () => {
         </h2>
 
         <p className="max-w-2xl text-white/60 mt-4 text-sm md:text-base">
-          A collection of modern and interactive web applications built with the Next.js,
-          MERN stack, focusing on performance, clean UI and real-world features.
+          A collection of modern and interactive web applications built with the
+          Next.js, MERN stack, focusing on performance, clean UI and real-world
+          features.
         </p>
 
         <div className="mt-6 w-40 h-[2px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
       </div>
-      <section id="swiper-section" className="w-full">
+      <section id="swiper-section" className="w-full h-auto">
         <Swiper
-          className="h-full w-full relative"
+          className="w-full h-auto relative"
           grabCursor
           parallax
           centeredSlides={true}
@@ -76,12 +79,12 @@ const Projects = () => {
         >
           {projects?.map((p, index) => {
             return (
-              <SwiperSlide key={index} className="rounded-lg md:rounded-2xl">
-                <div className="img-wrapper">
+              <SwiperSlide key={index} className="rounded-lg md:rounded-2xl w-full h-auto">
+                <div className="img-wrapper h-auto">
                   <img
                     src={p?.image}
                     alt=""
-                    className="rounded-lg md:rounded-2xl"
+                    className="rounded-lg md:rounded-2xl h-auto"
                   />
                 </div>
                 <button
@@ -94,6 +97,11 @@ const Projects = () => {
             );
           })}
         </Swiper>
+        <swiper>
+          <SwiperSlide>
+            <img src="/project-images/campaid.jpg" alt="" />
+          </SwiperSlide>
+        </swiper>
       </section>
 
       <dialog id="my_modal_3" className="modal">
