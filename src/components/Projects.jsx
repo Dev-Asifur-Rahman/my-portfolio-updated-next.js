@@ -9,19 +9,19 @@ const Projects = () => {
   const projects = [
     {
       name: "NextLearn",
-      image: "/project-images/nextlearn.jpg",
+      image: "https://i.ibb.co.com/1Y3Hb8Fw/nextlearn.jpg",
     },
     {
       name: "CampAid",
-      image: "/project-images/campaid.jpg",
+      image: "https://i.ibb.co.com/PG3NZm8x/campaid.jpg",
     },
     {
       name: "LitHub",
-      image: "/project-images/lithub.jpg",
+      image: "https://i.ibb.co.com/8gZg72HG/lithub.jpg",
     },
     {
       name: "DealBondhu",
-      image: "/project-images/dealbondhu.jpg",
+      image: "https://i.ibb.co.com/1p1sbXn/dealbondhu.jpg",
     },
   ];
   const [project, setProject] = useState(projects[0]);
@@ -49,42 +49,39 @@ const Projects = () => {
 
         <div className="mt-6 w-40 h-[2px] bg-gradient-to-r from-transparent via-white/60 to-transparent" />
       </div>
-      <section id="swiper-section" className="w-full h-auto">
+      <section id="swiper-section" className="w-full ">
         <Swiper
-          className="w-full h-auto relative"
+          className="w-full relative"
           grabCursor
           parallax
+          slidesPerView={1.5}
           centeredSlides={true}
-          initialSlide={2}
+          initialSlide={1}
           speed={900}
           modules={[Parallax]}
           breakpoints={{
             0: {
-              slidesPerView: 1.2,
-              spaceBetween: 15,
+              spaceBetween: 10,
             },
             640: {
-              slidesPerView: 1.2,
-              spaceBetween: 15,
+              spaceBetween: 10,
             },
             768: {
-              slidesPerView: 1.3,
-              spaceBetween: 20,
+              spaceBetween: 15,
             },
             1024: {
-              slidesPerView: 1.5,
-              spaceBetween: 40,
+              spaceBetween: 20,
             },
           }}
         >
           {projects?.map((p, index) => {
             return (
-              <SwiperSlide key={index} className="rounded-lg md:rounded-2xl w-full h-auto">
-                <div className="img-wrapper h-auto">
+              <SwiperSlide key={index} className="rounded-lg md:rounded-2xl">
+                <div className="img-wrapper">
                   <img
                     src={p?.image}
                     alt=""
-                    className="rounded-lg md:rounded-2xl h-auto"
+                    className="rounded-lg md:rounded-2xl"
                   />
                 </div>
                 <button
@@ -97,11 +94,6 @@ const Projects = () => {
             );
           })}
         </Swiper>
-        <swiper>
-          <SwiperSlide>
-            <img src="/project-images/campaid.jpg" alt="" />
-          </SwiperSlide>
-        </swiper>
       </section>
 
       <dialog id="my_modal_3" className="modal">
