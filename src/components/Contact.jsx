@@ -1,7 +1,12 @@
 import React from "react";
 import { Mail, MapPin, Briefcase, Phone, MessageCircle } from "lucide-react";
+import toast from "react-hot-toast";
 
 const Contact = () => {
+  const handleMail = async(e) =>{
+    e.preventDefault()
+    toast.success('Toasted')
+  }
   return (
     <div
       id="contact"
@@ -86,7 +91,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="glass-bg rounded-3xl p-6 md:p-8 space-y-5">
+          <form onSubmit={handleMail} className="glass-bg rounded-3xl p-6 md:p-8 space-y-5">
             <div>
               <label className="text-sm text-white/60 mb-2 block">
                 Your Name

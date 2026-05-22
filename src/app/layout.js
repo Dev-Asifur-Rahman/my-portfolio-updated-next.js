@@ -1,5 +1,6 @@
 import { Raleway } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
       className={`${raleway.variable} h-full antialiased`}
       data-theme="dark"
     >
-      <body className="">{children}</body>
+      <body className="">{children}
+        <Toaster />
+      </body>
     </html>
   );
 }
