@@ -20,8 +20,18 @@ export default function RootLayout({ children }) {
       className={`${raleway.variable} h-full antialiased`}
       data-theme="dark"
     >
-      <body className="">{children}
-        <Toaster />
+      <body className="">
+        {children}
+        <Toaster
+          toastOptions={{
+            className: "glass-bg !text-white backdrop-blur-xl",
+            style: {
+              background: "transparent",
+              boxShadow: "none",
+              color : "none"
+            },
+          }}
+        />
       </body>
     </html>
   );

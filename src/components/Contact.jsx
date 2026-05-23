@@ -1,12 +1,46 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Mail, MapPin, Briefcase, Phone, MessageCircle } from "lucide-react";
 import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const handleMail = async(e) =>{
-    e.preventDefault()
-    toast.success('Toasted')
-  }
+  const form = useRef();
+  const handleMail = async (e) => {
+    e.preventDefault();
+
+    const target = e.target;
+    const name = target.user_name.value.trim();
+    const email = target.user_email.value.trim();
+    const message = target.message.value.trim();
+
+    const emailPromise = new Promise((resolve, reject) => {
+      if (!name || !email || !message) {
+        reject("Fields can't be empty");
+        target.reset();
+        return;
+      }
+
+      const promise = emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
+      );
+
+      promise
+        .then(() => resolve("Message Sent Successfully"))
+        .catch(() => reject("Sending Failed!"));
+    });
+
+    toast.promise(emailPromise, {
+      loading: "Sending message...",
+      success: (msg) => {
+        target.reset();
+        return msg;
+      },
+      error: (err) => err,
+    });
+  };
   return (
     <div
       id="contact"
@@ -91,15 +125,21 @@ const Contact = () => {
             </div>
           </div>
 
-          <form onSubmit={handleMail} className="glass-bg rounded-3xl p-6 md:p-8 space-y-5">
+          <form
+            ref={form}
+            onSubmit={handleMail}
+            className="glass-bg rounded-3xl p-6 md:p-8 space-y-5"
+          >
             <div>
               <label className="text-sm text-white/60 mb-2 block">
                 Your Name
               </label>
 
               <input
+                required
                 type="text"
                 placeholder="Enter your name"
+                name="user_name"
                 className="w-full h-12 rounded-xl bg-white/5 border border-white/10 px-4 outline-none focus:border-white/30 transition-all"
               />
             </div>
@@ -110,7 +150,9 @@ const Contact = () => {
               </label>
 
               <input
+                required
                 type="email"
+                name="user_email"
                 placeholder="Enter your email"
                 className="w-full h-12 rounded-xl bg-white/5 border border-white/10 px-4 outline-none focus:border-white/30 transition-all"
               />
@@ -122,7 +164,9 @@ const Contact = () => {
               </label>
 
               <textarea
+                required
                 rows={5}
+                name="message"
                 placeholder="Write your message..."
                 className="w-full rounded-xl bg-white/5 border border-white/5 px-4 py-3 outline-none resize-none focus:border-white/30 transition-all"
               />
