@@ -64,7 +64,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="https://www.facebook.com/asifur.rahman.50742/"
+              href="https://www.facebook.com/profile.php?id=61582444741447"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition"
