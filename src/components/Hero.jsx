@@ -87,6 +87,7 @@ const Hero = () => {
                 width={500}
                 height={500}
                 alt="Asifur Rahman"
+                priority
                 onLoad={() => setImageLoaded(true)}
                 className="relative -z-10 w-52 md:w-72 lg:w-[320px] aspect-square object-cover rounded-full"
               />

@@ -65,14 +65,7 @@ const NavBar = ({ scrollRef }) => {
 
       <div className="w-1/3">
         <progress
-          className="progress transition-all duration-200
-          [&::-webkit-progress-value]:bg-gradient-to-r
-          [&::-webkit-progress-value]:from-[#38bdf8]
-          [&::-webkit-progress-value]:via-[#6366f1]
-          [&::-webkit-progress-value]:to-[#a855f7]
-          w-full"
-          value={progress}
-          max="100"
+          className="progress transition-all duration-200 [&::-webkit-progress-value]:bg-gradient-to-r [&::-webkit-progress-value]:from-[#38bdf8] [&::-webkit-progress-value]:via-[#6366f1] [&::-webkit-progress-value]:to-[#a855f7] w-full" value={progress} max="100"
         />
       </div>
     </div>
