@@ -21,7 +21,7 @@ const Projects = () => {
         "Tailwind CSS",
         "Firebase",
       ],
-      live: "https://nextlearn-demo.vercel.app",
+      live: "https://project-next-learn.vercel.app",
       github: "https://github.com/asifurrahman/nextlearn",
     },
     {
@@ -38,7 +38,7 @@ const Projects = () => {
         "Firebase",
         "Stripe",
       ],
-      live: "https://campaid-project.vercel.app",
+      live: "https://camp-aid.netlify.app",
       github: "https://github.com/asifurrahman/campaid",
     },
     {
@@ -70,7 +70,7 @@ const Projects = () => {
         "Tailwind CSS",
         "JWT",
       ],
-      live: "https://dealbondhu.vercel.app",
+      live: "https://deal-bondhu.vercel.app",
       github: "https://github.com/asifurrahman/dealbondhu",
     },
   ];
