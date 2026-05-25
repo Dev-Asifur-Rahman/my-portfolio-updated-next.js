@@ -14,15 +14,14 @@ const Projects = () => {
         "An AI-powered learning platform built with Next.js and the MERN stack. Features role-based dashboards, AI quiz generation, study planners, authentication and modern responsive UI.",
       tech: [
         "Next.js",
-        "React",
-        "Node.js",
+        "DeepSeek AI",
         "Express.js",
         "MongoDB",
+        "NextAuth.js",
         "Tailwind CSS",
-        "Firebase",
       ],
       live: "https://project-next-learn.vercel.app",
-      github: "https://github.com/asifurrahman/nextlearn",
+      github: "https://github.com/Dev-Asifur-Rahman/next-learn",
     },
     {
       name: "CampAid",
@@ -31,7 +30,6 @@ const Projects = () => {
         "A full-stack medical camp management platform with registration, participant management, Stripe payment integration, analytics dashboard and secure authentication system.",
       tech: [
         "React",
-        "Node.js",
         "Express.js",
         "MongoDB",
         "Tailwind CSS",
@@ -39,7 +37,8 @@ const Projects = () => {
         "Stripe",
       ],
       live: "https://camp-aid.netlify.app",
-      github: "https://github.com/asifurrahman/campaid",
+      github:
+        "https://github.com/Dev-Asifur-Rahman/re-assignment-twelfth-client",
     },
     {
       name: "LitHub",
@@ -55,7 +54,8 @@ const Projects = () => {
         "Firebase",
       ],
       live: "https://lithub-library.netlify.app",
-      github: "https://github.com/asifurrahman/lithub",
+      github:
+        "https://github.com/Dev-Asifur-Rahman/re-assignment-eleventh-client",
     },
     {
       name: "DealBondhu",
@@ -63,15 +63,15 @@ const Projects = () => {
       description:
         "A coupon and deals sharing platform where users can discover trending offers, manage deals and explore an interactive user-friendly marketplace experience.",
       tech: [
-        "React",
-        "Node.js",
+        "Next.js",
+        "NextAuth.js",
         "Express.js",
         "MongoDB",
-        "Tailwind CSS",
         "JWT",
       ],
       live: "https://deal-bondhu.vercel.app",
-      github: "https://github.com/asifurrahman/dealbondhu",
+      github:
+        "https://github.com/Dev-Asifur-Rahman/production-project-one-frontend",
     },
   ];
 
