@@ -27,7 +27,12 @@ const Hero = () => {
 
           <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 ">
             <button className="btn glass-bg border-0 rounded-full px-6">
-              Download Resume
+              <a
+                href="/pdf/Md Asifur Rahman Full Stack Resume.pdf"
+                download="/pdf/Md Asifur Rahman Full Stack Resume.pdf"
+              >
+                Download Resume
+              </a>
             </button>
 
             <button className="btn glass-bg hover:text-gradient rounded-full px-6">
