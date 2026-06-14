@@ -36,7 +36,13 @@ const Hero = () => {
             </button>
 
             <button className="btn glass-bg hover:text-gradient rounded-full px-6">
-              View Resume
+              <a
+                href="/pdf/Md Asifur Rahman Full Stack Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View Resume
+              </a>
             </button>
           </div>
 

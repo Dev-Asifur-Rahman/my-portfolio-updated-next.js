@@ -51,7 +51,7 @@ const NavBar = ({ scrollRef }) => {
     >
       <div className={`flex items-center gap-2 w-2/3 loaded`}>
         <Image
-          src={"/images/asifurs-logo3.webp"}
+          src={"/images/asifurs-logo4.webp"}
           width={500}
           height={500}
           alt="asifurs-image-logo"
