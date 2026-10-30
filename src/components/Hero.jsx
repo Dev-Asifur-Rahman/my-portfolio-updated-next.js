@@ -17,7 +17,7 @@ const Hero = () => {
           </h1>
 
           <h2 className="lg:text-2xl md:text-xl text-lg font-semibold mt-3">
-            Full Stack Developer
+            Full Stack Engineer
           </h2>
 
           <p className="mt-5 text-sm md:text-base lg:text-lg text-white/70 max-w-2xl">
