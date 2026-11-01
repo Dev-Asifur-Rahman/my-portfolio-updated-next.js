@@ -28,8 +28,8 @@ const Hero = () => {
           <div className="mt-6 flex flex-wrap items-center justify-center lg:justify-start gap-3 ">
             <button className="btn glass-bg border-0 rounded-full px-6">
               <a
-                href="/pdf/Md Asifur Rahman Full Stack Resume.pdf"
-                download="/pdf/Md Asifur Rahman Full Stack Resume.pdf"
+                href="/pdf/Md Asifur Rahman Software Engineer Resume.pdf"
+                download="/pdf/Md Asifur Rahman Software Engineer Resume.pdf"
               >
                 Download Resume
               </a>
@@ -37,7 +37,7 @@ const Hero = () => {
 
             <button className="btn glass-bg hover:text-gradient rounded-full px-6">
               <a
-                href="/pdf/Md Asifur Rahman Full Stack Resume.pdf"
+                href="/pdf/Md Asifur Rahman Software Engineer Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >

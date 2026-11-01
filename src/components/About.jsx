@@ -44,7 +44,7 @@ const About = () => {
           </h2>
 
           <p className="mt-5 text-white/70 text-sm md:text-base lg:text-lg leading-relaxed max-w-4xl">
-            A <span className="text-gradient ">Full Stack Developer</span>{" "}
+            A <span className="text-gradient ">Full Stack Engineer</span>{" "}
             passionate about creating modern, responsive and user-focused web
             applications. I enjoy turning ideas into interactive digital
             experiences using technologies like React, Next.js, Typescript,
